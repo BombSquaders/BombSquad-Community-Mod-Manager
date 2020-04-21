@@ -98,7 +98,7 @@ installing: List[str] = []
 
 def check_finished():
     """To check if all the mods have finished installing"""
-    if any([m not in installed for m in installing]):
+    if any(m not in installed for m in installing):
         return
     ba.screenmessage("installed everything.")
     if os.path.isfile(MOD_PATH + __name__ + ".pyc"):
